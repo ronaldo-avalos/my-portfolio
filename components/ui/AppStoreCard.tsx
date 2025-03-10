@@ -2,11 +2,11 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { Github, Download } from "lucide-react"
+import { GitBranchIcon, Download } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
+import {Badge } from "@/components/ui/badge"
 
-interface AppStoreCardProps {
+ interface AppStoreCardProps {
   title: string
   description: string
   longDescription: string
@@ -30,7 +30,7 @@ export default function AppStoreCard({ title, description, longDescription, badg
         <div className="flex-1">
           <div className="flex justify-between items-start">
             <h3 className="text-xl font-bold">{title}</h3>
-            {/* <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">{status}</Badge> */}
+            <Badge className="bg-primary/10 text-primary hover:bg-primary/20 border-0">{status}</Badge>
           </div>
           <p className="text-muted-foreground mb-2">{description}</p>
           <div className="flex flex-wrap gap-2 mb-2">
@@ -42,12 +42,12 @@ export default function AppStoreCard({ title, description, longDescription, badg
             ))}
           </div>
           <div className="flex gap-2">
-            {/* <Button size="sm" variant="outline" className="rounded-full" asChild>
+            <Button size="sm" variant="outline" className="rounded-full" asChild>
               <Link href="#" className="flex items-center">
-                <Github className="mr-1.5 h-3.5 w-3.5" />
+                <GitBranchIcon className="mr-1.5 h-3.5 w-3.5" />
                 Código
               </Link>
-            </Button> */}
+            </Button>
             <Button size="sm" className="rounded-full" asChild>
               <Link href="#" className="flex items-center">
                 <Download className="mr-1.5 h-3.5 w-3.5" />

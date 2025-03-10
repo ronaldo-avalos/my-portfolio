@@ -5,24 +5,17 @@ import Image from "next/image"
 import { useState, useEffect } from "react";
 
 import {
-  Github,
   Linkedin,
   Mail,
-  ExternalLink,
-  ChevronRight,
-  ChevronLeft,
-  Circle,
-  CircleDot,
   Code,
   GitBranch,
-  Server,
-  Figma,
-  Smartphone,
+  Moon,
+  GithubIcon,
+  Sun
 } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import AppStoreCard from "@/components/ui/AppStoreCard"
-import { Badge } from "@/components/ui/badge"
 
 export default function Portfolio() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -56,8 +49,8 @@ export default function Portfolio() {
 
   return (
     <div className="min-h-screen bg-background flex flex-col items-center">
-     {/* Header */}
-     <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur">
+      {/* Header */}
+      <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur">
         <div className="container max-w-4xl flex h-16 items-center justify-between">
           <Link href="/" className="font-bold text-xl">
             Ronaldo.dev
@@ -76,13 +69,11 @@ export default function Portfolio() {
           <div className="flex items-center gap-3">
             {/* Theme toggle button */}
             <Button className="rounded-full">Donwload CV</Button>
-            {/* <Button variant="ghost" size="icon" onClick={toggleTheme}>
-              {isDarkMode ? (
-                  <Image src="/images/sol-icon.png" alt="FitTracker Icon" width={24} height={24} />
-                ) : (
-                  <Image src="/images/luna-icon.png" alt="FitTracker Icon" width={24} height={24} />
-              )}
-            </Button> */}
+            {
+              <Button variant="ghost" size="icon" onClick={toggleTheme}>
+                {isDarkMode ? <Sun className="h-5 w-5 text-yellow-500" /> : <Moon className="h-5 w-5 text-gray-800" />}
+              </Button>
+            }
           </div>
         </div>
       </header>
@@ -113,7 +104,7 @@ export default function Portfolio() {
                 </Button>
                 <Button variant="ghost" size="icon" asChild className="rounded-full">
                   <Link href="https://github.com/Ronaldo-avalos" target="_blank" aria-label="GitHub">
-                    <Github className="h-5 w-5" />
+                    <GithubIcon className="h-5 w-5" />
                   </Link>
                 </Button>
                 <Button variant="ghost" size="icon" asChild className="rounded-full">
@@ -184,8 +175,8 @@ export default function Portfolio() {
                     <span>Swift</span>
                   </li>
                   <li className="flex items-center gap-2 text-muted-foreground">
-                  <Image src="/images/kotlin-icon.png" alt="FitTracker Icon" width={24} height={24} />
-                  <span>Kotlin</span>
+                    <Image src="/images/kotlin-icon.png" alt="FitTracker Icon" width={24} height={24} />
+                    <span>Kotlin</span>
                   </li>
                 </ul>
               </div>
@@ -199,11 +190,11 @@ export default function Portfolio() {
                 </h3>
                 <ul className="grid grid-cols-2 gap-2 flex-grow">
                   <li className="flex items-center gap-2 text-muted-foreground">
-                  <Image src="/images/uikit-icon.png" alt="FitTracker Icon" width={24} height={24} />
+                    <Image src="/images/uikit-icon.png" alt="FitTracker Icon" width={24} height={24} />
                     <span>UIKit</span>
                   </li>
                   <li className="flex items-center gap-2 text-muted-foreground">
-                  <Image src="/images/firebase-icon.png" alt="FitTracker Icon" width={24} height={24} />
+                    <Image src="/images/firebase-icon.png" alt="FitTracker Icon" width={24} height={24} />
                     <span>Firebase</span>
                   </li>
                   <li className="flex items-center gap-2 text-muted-foreground">
@@ -211,7 +202,7 @@ export default function Portfolio() {
                     <span>Git - Github</span>
                   </li>
                   <li className="flex items-center gap-2 text-muted-foreground">
-                  <Image src="/images/cocoapods-icon.svg" alt="FitTracker Icon" width={24} height={24} />
+                    <Image src="/images/cocoapods-icon.svg" alt="FitTracker Icon" width={24} height={24} />
                     <span>Cocoa-pods</span>
                   </li>
                   <li className="flex items-center gap-2 text-muted-foreground">
@@ -219,7 +210,7 @@ export default function Portfolio() {
                     <span>FSCalendar</span>
                   </li>
                   <li className="flex items-center gap-2 text-muted-foreground">
-                  <Image src="/images/swiftui-icon.png" alt="FitTracker Icon" width={24} height={24} />
+                    <Image src="/images/swiftui-icon.png" alt="FitTracker Icon" width={24} height={24} />
                     <span>SwiftUI</span>
                   </li>
                 </ul>
@@ -236,27 +227,27 @@ export default function Portfolio() {
                 </h3>
                 <ul className="grid grid-cols-2 gap-2 flex-grow">
                   <li className="flex items-center gap-2 text-muted-foreground">
-                  <Image src="/images/figma-icon.png" alt="FitTracker Icon" width={24} height={24} />
+                    <Image src="/images/figma-icon.png" alt="FitTracker Icon" width={24} height={24} />
                     <span>Figma</span>
                   </li>
                   <li className="flex items-center gap-2 text-muted-foreground">
-                  <Image src="/images/jira-icon.svg" alt="FitTracker Icon" width={24} height={24} />
+                    <Image src="/images/jira-icon.svg" alt="FitTracker Icon" width={24} height={24} />
                     <span>Jira Software</span>
                   </li>
                   <li className="flex items-center gap-2 text-muted-foreground">
-                  <Image src="/images/connect-icon.webp" alt="FitTracker Icon" width={24} height={24} />
+                    <Image src="/images/connect-icon.webp" alt="FitTracker Icon" width={24} height={24} />
                     <span>App Store Connect</span>
                   </li>
                   <li className="flex items-center gap-2 text-muted-foreground">
-                  <Image src="/images/playconsole-icon.png" alt="FitTracker Icon" width={24} height={24} />
+                    <Image src="/images/playconsole-icon.png" alt="FitTracker Icon" width={24} height={24} />
                     <span>Google Play console</span>
                   </li>
                   <li className="flex items-center gap-2 text-muted-foreground">
-                  <Image src="/images/photoshop-icon.png" alt="FitTracker Icon" width={24} height={24} />
+                    <Image src="/images/photoshop-icon.png" alt="FitTracker Icon" width={24} height={24} />
                     <span>Photoshop</span>
                   </li>
                   <li className="flex items-center gap-2 text-muted-foreground">
-                  <Image src="/images/illustrator-icon.png" alt="FitTracker Icon" width={24} height={24} />
+                    <Image src="/images/illustrator-icon.png" alt="FitTracker Icon" width={24} height={24} />
                     <span>Illustrator</span>
                   </li>
                 </ul>
@@ -265,7 +256,7 @@ export default function Portfolio() {
               <div className="h-[250px] p-4 border rounded-lg flex flex-col">
                 <h3 className="text-xl font-semibold mb-3 flex items-center">
                   <span className="text-primary p-1.5 rounded-md mr-2">
-                  <code className="text-sm">{"🧑🏻‍💻"}</code>
+                    <code className="text-sm">{"🧑🏻‍💻"}</code>
                   </span>
                   Methodologies
                 </h3>
@@ -319,7 +310,7 @@ export default function Portfolio() {
               title="On-calls Guardias Médicas"
               description="Aplicación de recetas con experiencia de realidad aumentada"
               longDescription="Una innovadora aplicación de cocina que utiliza realidad aumentada para mostrar instrucciones paso a paso y visualizar el resultado final de las recetas."
-              badges={["Swift", "UIKit", "Firebase", "Core Data","Kotlin","Dagger Hilt","XML"]}
+              badges={["Swift", "UIKit", "Firebase", "Core Data", "Kotlin", "Dagger Hilt", "XML"]}
               status="App Store"
               icon="/images/oncalls-icon.webp"
               screenshots={[
@@ -358,118 +349,6 @@ export default function Portfolio() {
           </p>
         </div>
       </footer>
-    </div>
-  )
-}
-
-interface ProjectCardProps {
-  title: string
-  description: string
-  longDescription: string
-  badges: string[]
-  status: string
-  images: string[]
-}
-
-function ProjectCard({ title, description, longDescription, badges, status, images }: ProjectCardProps) {
-  const [currentImage, setCurrentImage] = useState(0)
-
-  const nextImage = () => {
-    setCurrentImage((prev) => (prev + 1) % images.length)
-  }
-
-  const prevImage = () => {
-    setCurrentImage((prev) => (prev - 1 + images.length) % images.length)
-  }
-
-  return (
-    <div className="flex flex-col md:flex-row gap-8 bg-card rounded-lg overflow-hidden border">
-      {/* Left side - Image slider */}
-      <div className="md:w-2/5 relative">
-        <div className="relative aspect-[9/19] w-full overflow-hidden bg-muted">
-          <Image
-            src={images[currentImage] || "/placeholder.svg"}
-            alt={`${title} screenshot ${currentImage + 1}`}
-            fill
-            className="object-cover object-center"
-          />
-
-          {/* Navigation buttons */}
-          <div className="absolute inset-x-0 bottom-12 flex items-center justify-center gap-4 p-2">
-            <Button
-              variant="ghost"
-              size="icon"
-              className="h-8 w-8 rounded-full bg-background/80 backdrop-blur-sm"
-              onClick={prevImage}
-            >
-              <ChevronLeft className="h-4 w-4" />
-              <span className="sr-only">Anterior</span>
-            </Button>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="h-8 w-8 rounded-full bg-background/80 backdrop-blur-sm"
-              onClick={nextImage}
-            >
-              <ChevronRight className="h-4 w-4" />
-              <span className="sr-only">Siguiente</span>
-            </Button>
-          </div>
-
-          {/* Dots indicator */}
-          <div className="absolute bottom-2 left-0 right-0 flex justify-center gap-1">
-            {images.map((_, index) => (
-              <button
-                key={index}
-                className="p-1"
-                onClick={() => setCurrentImage(index)}
-                aria-label={`Ver imagen ${index + 1}`}
-              >
-                {index === currentImage ? (
-                  <CircleDot className="h-3 w-3 text-primary" />
-                ) : (
-                  <Circle className="h-3 w-3 text-muted-foreground/50" />
-                )}
-              </button>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Right side - Project info */}
-      <div className="md:w-3/5 p-6 flex flex-col">
-        <div className="flex justify-between items-start mb-2">
-          <h3 className="text-2xl font-bold">{title}</h3>
-          <Badge>{status}</Badge>
-        </div>
-
-        <p className="text-muted-foreground font-medium mb-4">{description}</p>
-
-        <div className="flex flex-wrap gap-2 mb-4">
-          {badges.map((badge, index) => (
-            <Badge key={index} variant="outline">
-              {badge}
-            </Badge>
-          ))}
-        </div>
-
-        <p className="text-muted-foreground mb-6 flex-grow">{longDescription}</p>
-
-        <div className="flex gap-4 mt-auto">
-          <Button variant="outline" size="sm" asChild>
-            <Link href="#" className="flex items-center">
-              <Github className="mr-2 h-4 w-4" />
-              Código
-            </Link>
-          </Button>
-          <Button size="sm" asChild>
-            <Link href="#" className="flex items-center">
-              Ver detalles
-              <ExternalLink className="ml-2 h-4 w-4" />
-            </Link>
-          </Button>
-        </div>
-      </div>
     </div>
   )
 }
