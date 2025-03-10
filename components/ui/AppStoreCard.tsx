@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { GitBranchIcon, Download, ChevronDown, ChevronUp, Github } from "lucide-react";
+import {ChevronDown, ChevronUp, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Url } from "next/dist/shared/lib/router/router";
 
