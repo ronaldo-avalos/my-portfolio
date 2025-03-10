@@ -171,11 +171,11 @@ export default function Portfolio() {
                 </h3>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2 text-muted-foreground">
-                    <Image src="/images/swift-icon.png" alt="FitTracker Icon" width={24} height={24} />
+                    <Image src="/images/swift-icon.webp" alt="FitTracker Icon" width={24} height={24} />
                     <span>Swift</span>
                   </li>
                   <li className="flex items-center gap-2 text-muted-foreground">
-                    <Image src="/images/kotlin-icon.png" alt="FitTracker Icon" width={24} height={24} />
+                    <Image src="/images/kotlin-icon.webp" alt="FitTracker Icon" width={24} height={24} />
                     <span>Kotlin</span>
                   </li>
                 </ul>
@@ -190,11 +190,11 @@ export default function Portfolio() {
                 </h3>
                 <ul className="grid grid-cols-2 gap-2 flex-grow">
                   <li className="flex items-center gap-2 text-muted-foreground">
-                    <Image src="/images/uikit-icon.png" alt="FitTracker Icon" width={24} height={24} />
+                    <Image src="/images/uikit-icon.webp" alt="FitTracker Icon" width={24} height={24} />
                     <span>UIKit</span>
                   </li>
                   <li className="flex items-center gap-2 text-muted-foreground">
-                    <Image src="/images/firebase-icon.png" alt="FitTracker Icon" width={24} height={24} />
+                    <Image src="/images/firebase-icon.webp" alt="FitTracker Icon" width={24} height={24} />
                     <span>Firebase</span>
                   </li>
                   <li className="flex items-center gap-2 text-muted-foreground">
@@ -202,7 +202,7 @@ export default function Portfolio() {
                     <span>Git - Github</span>
                   </li>
                   <li className="flex items-center gap-2 text-muted-foreground">
-                    <Image src="/images/cocoapods-icon.svg" alt="FitTracker Icon" width={24} height={24} />
+                    <Image src="/images/cocoapods-icon.webp" alt="FitTracker Icon" width={24} height={24} />
                     <span>Cocoa-pods</span>
                   </li>
                   <li className="flex items-center gap-2 text-muted-foreground">
@@ -210,7 +210,7 @@ export default function Portfolio() {
                     <span>FSCalendar</span>
                   </li>
                   <li className="flex items-center gap-2 text-muted-foreground">
-                    <Image src="/images/swiftui-icon.png" alt="FitTracker Icon" width={24} height={24} />
+                    <Image src="/images/swiftui-icon.webp" alt="FitTracker Icon" width={24} height={24} />
                     <span>SwiftUI</span>
                   </li>
                 </ul>
@@ -227,11 +227,11 @@ export default function Portfolio() {
                 </h3>
                 <ul className="grid grid-cols-2 gap-2 flex-grow">
                   <li className="flex items-center gap-2 text-muted-foreground">
-                    <Image src="/images/figma-icon.png" alt="FitTracker Icon" width={24} height={24} />
+                    <Image src="/images/figma-icon.webp" alt="FitTracker Icon" width={24} height={24} />
                     <span>Figma</span>
                   </li>
                   <li className="flex items-center gap-2 text-muted-foreground">
-                    <Image src="/images/jira-icon.svg" alt="FitTracker Icon" width={24} height={24} />
+                    <Image src="/images/jira-icon.webp" alt="FitTracker Icon" width={24} height={24} />
                     <span>Jira Software</span>
                   </li>
                   <li className="flex items-center gap-2 text-muted-foreground">
@@ -239,15 +239,15 @@ export default function Portfolio() {
                     <span>App Store Connect</span>
                   </li>
                   <li className="flex items-center gap-2 text-muted-foreground">
-                    <Image src="/images/playconsole-icon.png" alt="FitTracker Icon" width={24} height={24} />
+                    <Image src="/images/playconsole-icon.webp" alt="FitTracker Icon" width={24} height={24} />
                     <span>Google Play console</span>
                   </li>
                   <li className="flex items-center gap-2 text-muted-foreground">
-                    <Image src="/images/photoshop-icon.png" alt="FitTracker Icon" width={24} height={24} />
+                    <Image src="/images/photoshop-icon.webp" alt="FitTracker Icon" width={24} height={24} />
                     <span>Photoshop</span>
                   </li>
                   <li className="flex items-center gap-2 text-muted-foreground">
-                    <Image src="/images/illustrator-icon.png" alt="FitTracker Icon" width={24} height={24} />
+                    <Image src="/images/illustrator-icon.webp" alt="FitTracker Icon" width={24} height={24} />
                     <span>Illustrator</span>
                   </li>
                 </ul>
@@ -290,53 +290,52 @@ export default function Portfolio() {
             <AppStoreCard
               title="Mejor.ai"
               description="Aplicación de mejora y rescalado de imágenes con inteligencia artifical"
-              longDescription="Una aplicación completa para seguimiento de actividad física, nutrición y progreso personal. Incluye sincronización con HealthKit y visualizaciones personalizadas."
-              badges={["Swift", "SwiftUI", "HealthKit", "Core Data"]}
-              status="App Store"
-              icon="/images/mejor-ai-icon.png"
+              longDescription="Mejor.ai es una solución innovadora para la mejora y optimización de imágenes mediante el uso de inteligencia artificial. Esta aplicación permite realizar ajustes de calidad y tamaño en tus fotos, manteniendo la resolución y detalles clave. Incluye características como un sistema de mejora automático y una interfaz intuitiva para una experiencia de usuario excepcional."
+              badges={["Swift", "SwiftUI","MVVM", "HealthKit", "Core Data"]}
+              icon="/images/mejor-ai-icon.webp"
+              appStore
               screenshots={[
-                "/images/mejor-ai-1.png",
-                "/images/mejor-ai-2.png",
-                "/images/mejor-ai-3.png",
-                "/images/mejor-ai-4.png",
-                "/images/mejor-ai-5.png",
-                "/images/mejor-ai-6.png",
-                "/images/mejor-ai-7.png",
-                "/images/mejor-ai-8.png",
-              ]}
-            />
+                "/images/mejor-ai-1.webp",
+                "/images/mejor-ai-2.webp",
+                "/images/mejor-ai-3.webp",
+                "/images/mejor-ai-4.webp",
+                "/images/mejor-ai-5.webp",
+                "/images/mejor-ai-6.webp",
+                "/images/mejor-ai-7.webp",
+                "/images/mejor-ai-8.webp",
+              ]} appleLink={""} googleLink={""} codeLink={""}            />
 
             <AppStoreCard
               title="On-calls Guardias Médicas"
-              description="Aplicación de recetas con experiencia de realidad aumentada"
-              longDescription="Una innovadora aplicación de cocina que utiliza realidad aumentada para mostrar instrucciones paso a paso y visualizar el resultado final de las recetas."
-              badges={["Swift", "UIKit", "Firebase", "Core Data", "Kotlin", "Dagger Hilt", "XML"]}
-              status="App Store"
+              description="Alicación que se encuentra en el top de aplicaciones en Medicina"
+              longDescription="On-calls Guardias Médicas es una herramienta esencial para médicos internos, permitiendo llevar un registro detallado de las guardias médicas, horarios, y tareas asignadas. La app facilita el acceso rápido a información crítica y ayuda a mejorar la organización durante las jornadas laborales, asegurando un mejor rendimiento y seguimiento. Está integrada con tecnologías de vanguardia como Firebase para la sincronización de datos en tiempo real."
+              badges={["Swift","Kotlin","MVVM","UIKit", "Firebase", "Core Data", "Kotlin", "Dagger Hilt", "XML","Push notificacions"]}
               icon="/images/oncalls-icon.webp"
+              appStore
+              playStore
               screenshots={[
-                "/images/mejor-ai-1.png",
-                "/images/mejor-ai-2.png",
-                "/images/mejor-ai-3.png",
-                "/images/mejor-ai-4.png",
-                "/images/mejor-ai-5.png",
-              ]}
-            />
+                "/images/oncalls-sc-1.webp",
+                "/images/oncalls-sc-2.webp",
+                "/images/oncalls-sc-3.webp",
+                "/images/oncalls-sc-4.webp",
+                "/images/oncalls-sc-5.webp",
+              ]} appleLink={"https://apps.apple.com/mx/app/guardias-médicas/id1501607063"} 
+              googleLink={"https://play.google.com/store/apps/details?id=mx.vecinio.guardiasmedicas&hl=es_MX"} codeLink={""}            />
 
             <AppStoreCard
               title="Subcalenro"
-              description="Control de dispositivos domésticos inteligentes"
-              longDescription="Una aplicación para controlar dispositivos domésticos inteligentes con integración HomeKit. Incluye automatizaciones, escenas y control por voz con Siri."
-              badges={["Swift", "UiKit", "Firebase", "Core Data"]}
-              status="Beta"
-              icon="/placeholder.svg?height=120&width=120"
+              description="Control de tus subscripciones con un amigable calendario"
+              longDescription="Subcalenro es una aplicación intuitiva que permite llevar el control de todas tus suscripciones a través de un calendario visual. Puedes gestionar fechas de vencimiento, recibir recordatorios y planificar de manera más eficiente tus pagos recurrentes. Está diseñada para simplificar el seguimiento de tus suscripciones y evitar olvidos o cargos inesperados."
+              badges={["Swift", "UiKit","MVVM", "Firebase", "Core Data", "Push notificacions"]}
+              icon="/images/subcalenro-icon.webp"
+              code
               screenshots={[
-                "/images/mejor-ai-1.png",
-                "/images/mejor-ai-2.png",
-                "/images/mejor-ai-3.png",
-                "/images/mejor-ai-4.png",
-                "/images/mejor-ai-5.png",
-              ]}
-            />
+                "/images/subcal-sc-1.webp",
+                "/images/subcal-sc-2.webp",
+                "/images/subcal-sc-3.webp",
+                "/images/subcal-sc-4.webp",
+              ]} appleLink={""} googleLink={""} 
+              codeLink={"https://github.com/ronaldo-avalos/subcalenro_iOS"}            />
           </div>
         </section>
       </main>
