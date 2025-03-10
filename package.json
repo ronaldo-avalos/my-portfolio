@@ -1,12 +1,12 @@
 {
-  "name": "ronaldo-avalos-dev",
+  "name": "my-portfolio",
   "homepage": "https://ronaldo-avalos.github.io/my-portfolio/",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+   "deploy": "gh-pages -d .next",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
