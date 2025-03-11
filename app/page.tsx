@@ -292,7 +292,6 @@ export default function Portfolio() {
             <AppStoreCard
               title="Mejor.ai"
               description="Improve and enhance your images with artificial intelligence"
-              longDescription="Mejor.ai es una solución innovadora para la mejora y optimización de imágenes mediante el uso de inteligencia artificial. Esta aplicación permite realizar ajustes de calidad y tamaño en tus fotos, manteniendo la resolución y detalles clave. Incluye características como un sistema de mejora automático y una interfaz intuitiva para una experiencia de usuario excepcional."
               badges={["Swift", "SwiftUI", "MVVM", "HealthKit", "Core Data"]}
               icon="/images/mejor-ai-icon.webp"
               appStore
@@ -310,7 +309,6 @@ export default function Portfolio() {
             <AppStoreCard
               title="On-calls Guardias Médicas"
               description="Alication that is at the top of applications in Medicines"
-              longDescription="On-calls Guardias Médicas es una herramienta esencial para médicos internos, permitiendo llevar un registro detallado de las guardias médicas, horarios, y tareas asignadas. La app facilita el acceso rápido a información crítica y ayuda a mejorar la organización durante las jornadas laborales, asegurando un mejor rendimiento y seguimiento. Está integrada con tecnologías de vanguardia como Firebase para la sincronización de datos en tiempo real."
               badges={["Swift", "Kotlin", "MVVM", "UIKit", "Firebase", "Core Data", "Kotlin", "Dagger Hilt", "XML", "Push notificacions"]}
               icon="/images/oncalls-icon.webp"
               appStore
@@ -327,7 +325,6 @@ export default function Portfolio() {
             <AppStoreCard
               title="Subcalenro"
               description="Seguimiento de suscripciones con un calendario fácil de usar"
-              longDescription="Subcalenro es una aplicación intuitiva que permite llevar el control de todas tus suscripciones a través de un calendario visual. Puedes gestionar fechas de vencimiento, recibir recordatorios y planificar de manera más eficiente tus pagos recurrentes. Está diseñada para simplificar el seguimiento de tus suscripciones y evitar olvidos o cargos inesperados."
               badges={["Swift", "UiKit", "MVVM", "Firebase", "Core Data", "Push notificacions"]}
               icon="/images/subcalenro-icon.webp"
               code

@@ -10,7 +10,6 @@ import { Url } from "next/dist/shared/lib/router/router";
 interface AppStoreCardProps {
   title: string;
   description: string;
-  longDescription: string;
   badges: string[];
   icon: string;
   screenshots: string[];
@@ -25,7 +24,6 @@ interface AppStoreCardProps {
 export default function AppStoreCard({
   title,
   description,
-  longDescription,
   badges,
   icon,
   screenshots,
