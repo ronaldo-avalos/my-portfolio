@@ -36,7 +36,7 @@ export default function AppStoreCard({
   googleLink,
   codeLink
 }: AppStoreCardProps) {
-  const [showScreenshots, setShowScreenshots] = useState(true);
+  const [showScreenshots, setShowScreenshots] = useState(false);
 
   return (
     <div className="space-y-6">
@@ -55,7 +55,7 @@ export default function AppStoreCard({
           {appStore && (
               <Button size="sm" variant="link" className="rounded-full" asChild>
                 <Link href={appleLink} className="flex items-leading" target="_blank" rel="noopener noreferrer">
-                  <Image src="/images/apple-store-logo.webp" alt="Apple Store" width={42} height={42} className="mr-1.5" />
+                <Image src="/images/applestore.webp" alt="Apple Store" width={24} height={24} className="mr-1.5" />
                 </Link>
               </Button>
             )}
@@ -91,12 +91,6 @@ export default function AppStoreCard({
      {/* Buttons */}
           </div>
         </div>
-      </div>
-
-      {/* App description */}
-      <div className="bg-muted p-2 rounded-lg">
-        <h4 className="font-medium mb-2">Description</h4>
-        <p className="text-muted-foreground text-sm">{longDescription}</p>
       </div>
 
       {/* Toggle Screenshots Button */}

@@ -11,6 +11,7 @@ import {
   GitBranch,
   Moon,
   GithubIcon,
+  ArrowRight,
   Sun
 } from "lucide-react"
 
@@ -50,25 +51,14 @@ export default function Portfolio() {
   return (
     <div className="min-h-screen bg-background flex flex-col items-center">
       {/* Header */}
-      <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur">
+      <header className="sticky top-0 z-40 w-full border-b bg-background/30 backdrop-blur-lg">
         <div className="container max-w-4xl flex h-16 items-center justify-between">
           <Link href="/" className="font-bold text-xl">
             Ronaldo.dev
           </Link>
-          <nav className="hidden md:flex gap-6">
-            <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-              About me
-            </Link>
-            <Link href="#skills" className="text-muted-foreground hover:text-foreground transition-colors">
-              Skills
-            </Link>
-            <Link href="#projects" className="text-muted-foreground hover:text-foreground transition-colors">
-              Projects
-            </Link>
-          </nav>
           <div className="flex items-center gap-3">
             {/* Theme toggle button */}
-            <Button className="rounded-full">Donwload CV</Button>
+            <Button className="rounded-full">Download CV</Button>
             {
               <Button variant="ghost" size="icon" onClick={toggleTheme}>
                 {isDarkMode ? <Sun className="h-5 w-5 text-yellow-500" /> : <Moon className="h-5 w-5 text-gray-800" />}
@@ -80,22 +70,15 @@ export default function Portfolio() {
 
 
       <main className="container py-10 max-w-4xl">
-        <section className="py-16 md:py-24">
-          <div className="flex flex-col md:flex-row gap-12 items-center md:items-start">
-            {/* Left column - Profile & Social */}
-            <div className="md:w-1/3 flex flex-col items-center text-center ">
+        {/* Profile & Social Section */}
+        <section className="py-8 md:py-12">
+          <div className="flex flex-col gap-12 items-center text-center">
+            <div className="flex flex-col items-center text-center w-full">
               <div className="relative w-32 h-32 mb-6 rounded-full overflow-hidden">
                 <Image src="/images/profile.jpg" alt="Foto de perfil" fill className="object-cover" />
               </div>
               <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-3">Ronaldo Avalos</h1>
-              <p className="text-lg text-muted-foreground mb-6">Creando experiencias móviles elegantes y funcionales</p>
-              {/* <div className="flex flex-wrap justify-center gap-3 mb-6">
-                <Button asChild>
-                  <Link href="#projects">
-                    Projets <ChevronRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div> */}
+              <p className="text-lg text-muted-foreground mb-6">Creating elegant and functional mobile experiences</p>
               <div className="flex items-center gap-3">
                 <Button variant="ghost" size="icon" asChild className="rounded-full">
                   <Link href="mailto:ronaldoadan1@gmail.com" aria-label="Email">
@@ -113,42 +96,60 @@ export default function Portfolio() {
                   </Link>
                 </Button>
               </div>
-              {/* <Button className="rounded-full">Projects </Button> */}
+              <div className="py-8">
+                <Link href="#projects" className="text-muted-foreground hover:text-foreground transition-colors">
+                  <Button className="rounded-full flex items-center">
+                    Projects
+                    <ArrowRight className="ml-2" /> {/* Añadir el icono con un margen a la izquierda */}
+                  </Button>
+                </Link>
+              </div>
             </div>
-
-            {/* Right column - About & Experience */}
-            <div className="md:w-2/3">
-              <h2 className="text-2xl font-bold mb-6 md:hidden text-center">About me</h2>
+          </div>
+        </section>
+        {/* About & Experience Section */}
+        <section className="py-16 md:py-16">
+          <div className="flex flex-col md:flex-row gap-12">
+            {/* Sobre mí */}
+            <div className="md:w-1/2 mx-auto">
               <div className="space-y-8">
                 <div>
-                  <h2 className="text-2xl font-bold mb-4 hidden md:block">About me</h2>
-                  <div className="space-y-4">
-                    <p className="text-muted-foreground">
-                      A developer specialized in mobile applications with nearly 3 years of experience creating native apps for iOS and Android,
-                      successfully published on the App Store and Google Play.
-                    </p>
-                    <p className="text-muted-foreground">
-                      My primary goal is to continue growing as an iOS developer, an area where I am fully prepared to excel.
-                      I have clear goals and a strong passion for tackling new challenges.
-                    </p>
+                  <h2 className="text-2xl font-bold mb-6">About me</h2>
+                  <p className="text-muted-foreground">
+                    A developer specialized in mobile applications with nearly 3 years of experience creating native apps for iOS and Android,
+                    successfully published on the App Store and Google Play.
+                  </p>
+                  <p className="text-muted-foreground">
+                    My primary goal is to continue growing as an iOS developer, an area where I am fully prepared to excel.
+                    I have clear goals and a strong passion for tackling new challenges.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Experiencia */}
+            <div className="md:w-1/2 bg-muted rounded-lg p-6">
+              <h3 className="font-medium text-xl mb-4">Work experience</h3>
+              <div className="relative border-l-2 border-gray-400 pl-6 space-y-6">
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
+                  <div>
+                    <div className="font-medium">Developer iOS Mid</div>
+                    <div className="text-muted-foreground">MatchBall Inc. • 2024 - Presente</div>
                   </div>
                 </div>
-
-                <div className="bg-muted rounded-lg p-6">
-                  <h3 className="font-medium text-xl mb-4">Experiencia profesional</h3>
-                  <div className="space-y-4">
-                    <div>
-                      <div className="font-medium">Desarrollador iOS Senior</div>
-                      <div className="text-muted-foreground">TechApp Inc. • 2020 - Presente</div>
-                    </div>
-                    <div>
-                      <div className="font-medium">Desarrollador iOS</div>
-                      <div className="text-muted-foreground">MobileStudio • 2018 - 2020</div>
-                    </div>
-                    <div>
-                      <div className="font-medium">Desarrollador iOS Junior</div>
-                      <div className="text-muted-foreground">AppStart • 2016 - 2018</div>
-                    </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-gray-600 rounded-full"></div>
+                  <div>
+                    <div className="font-medium">Developer iOS</div>
+                    <div className="text-muted-foreground">Sfera • 2023 - 2024</div>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-gray-600 rounded-full"></div>
+                  <div>
+                    <div className="font-medium">Developer iOS Junior</div>
+                    <div className="text-muted-foreground">Vecinio Technologies • 2022 - 2023</div>
                   </div>
                 </div>
               </div>
@@ -156,9 +157,10 @@ export default function Portfolio() {
           </div>
         </section>
 
+
         {/* Skills Section */}
         <section id="skills" className="py-16 border-t">
-          <h2 className="text-3xl font-bold mb-8">Skills</h2>
+          <h2 className="text-2xl font-bold mb-8">Skills</h2>
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
@@ -285,13 +287,13 @@ export default function Portfolio() {
 
         {/* Projects Section */}
         <section id="projects" className="py-16 border-t">
-          <h2 className="text-3xl font-bold mb-8">Featured projects</h2>
+          <h2 className="text-2xl font-bold mb-8">Featured projects</h2>
           <div className="space-y-16">
             <AppStoreCard
               title="Mejor.ai"
-              description="Aplicación de mejora y rescalado de imágenes con inteligencia artifical"
+              description="Improve and enhance your images with artificial intelligence"
               longDescription="Mejor.ai es una solución innovadora para la mejora y optimización de imágenes mediante el uso de inteligencia artificial. Esta aplicación permite realizar ajustes de calidad y tamaño en tus fotos, manteniendo la resolución y detalles clave. Incluye características como un sistema de mejora automático y una interfaz intuitiva para una experiencia de usuario excepcional."
-              badges={["Swift", "SwiftUI","MVVM", "HealthKit", "Core Data"]}
+              badges={["Swift", "SwiftUI", "MVVM", "HealthKit", "Core Data"]}
               icon="/images/mejor-ai-icon.webp"
               appStore
               screenshots={[
@@ -303,13 +305,13 @@ export default function Portfolio() {
                 "/images/mejor-ai-6.webp",
                 "/images/mejor-ai-7.webp",
                 "/images/mejor-ai-8.webp",
-              ]} appleLink={""} googleLink={""} codeLink={""}            />
+              ]} appleLink={""} googleLink={""} codeLink={""} />
 
             <AppStoreCard
               title="On-calls Guardias Médicas"
-              description="Alicación que se encuentra en el top de aplicaciones en Medicina"
+              description="Alication that is at the top of applications in Medicines"
               longDescription="On-calls Guardias Médicas es una herramienta esencial para médicos internos, permitiendo llevar un registro detallado de las guardias médicas, horarios, y tareas asignadas. La app facilita el acceso rápido a información crítica y ayuda a mejorar la organización durante las jornadas laborales, asegurando un mejor rendimiento y seguimiento. Está integrada con tecnologías de vanguardia como Firebase para la sincronización de datos en tiempo real."
-              badges={["Swift","Kotlin","MVVM","UIKit", "Firebase", "Core Data", "Kotlin", "Dagger Hilt", "XML","Push notificacions"]}
+              badges={["Swift", "Kotlin", "MVVM", "UIKit", "Firebase", "Core Data", "Kotlin", "Dagger Hilt", "XML", "Push notificacions"]}
               icon="/images/oncalls-icon.webp"
               appStore
               playStore
@@ -319,14 +321,14 @@ export default function Portfolio() {
                 "/images/oncalls-sc-3.webp",
                 "/images/oncalls-sc-4.webp",
                 "/images/oncalls-sc-5.webp",
-              ]} appleLink={"https://apps.apple.com/mx/app/guardias-médicas/id1501607063"} 
-              googleLink={"https://play.google.com/store/apps/details?id=mx.vecinio.guardiasmedicas&hl=es_MX"} codeLink={""}            />
+              ]} appleLink={"https://apps.apple.com/mx/app/guardias-médicas/id1501607063"}
+              googleLink={"https://play.google.com/store/apps/details?id=mx.vecinio.guardiasmedicas&hl=es_MX"} codeLink={""} />
 
             <AppStoreCard
               title="Subcalenro"
-              description="Control de tus subscripciones con un amigable calendario"
+              description="Seguimiento de suscripciones con un calendario fácil de usar"
               longDescription="Subcalenro es una aplicación intuitiva que permite llevar el control de todas tus suscripciones a través de un calendario visual. Puedes gestionar fechas de vencimiento, recibir recordatorios y planificar de manera más eficiente tus pagos recurrentes. Está diseñada para simplificar el seguimiento de tus suscripciones y evitar olvidos o cargos inesperados."
-              badges={["Swift", "UiKit","MVVM", "Firebase", "Core Data", "Push notificacions"]}
+              badges={["Swift", "UiKit", "MVVM", "Firebase", "Core Data", "Push notificacions"]}
               icon="/images/subcalenro-icon.webp"
               code
               screenshots={[
@@ -334,8 +336,8 @@ export default function Portfolio() {
                 "/images/subcal-sc-2.webp",
                 "/images/subcal-sc-3.webp",
                 "/images/subcal-sc-4.webp",
-              ]} appleLink={""} googleLink={""} 
-              codeLink={"https://github.com/ronaldo-avalos/subcalenro_iOS"}            />
+              ]} appleLink={""} googleLink={""}
+              codeLink={"https://github.com/ronaldo-avalos/subcalenro_iOS"} />
           </div>
         </section>
       </main>
